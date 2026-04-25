@@ -1,71 +1,74 @@
-# PrepWise | AI-Powered Mock Interview Platform
+# PrepWise | AI-Driven Architectural Mock Interview Platform
 
-PrepWise is a professional interview preparation platform that uses Artificial Intelligence to bridge the gap between candidates and high-pressure technical interviews. It features real-time voice simulation, dynamic question generation, and personalized feedback.
+PrepWise is a production-grade interview simulation ecosystem that leverages **Large Language Models (LLMs)** and **Asynchronous Voice Pipelines** to provide candidates with a high-fidelity mock interview experience. 
 
-## 🚀 Key Features
+The platform is architected to demonstrate enterprise-level full-stack integration, focusing on the intersection of **Artificial Intelligence** and **Real-time Communication**.
 
-*   **🎙️ AI Voice Simulation:** Real-time conversational mock interviews with integrated speech-to-text.
-*   **🤖 Smart Question Generation:** Uses Large Language Models to generate role-specific technical and behavioral questions.
-*   **📈 Feedback & Sentiment Analysis:** Evaluates responses to provide immediate behavioral insights.
-*   **🏗️ Enterprise-Grade Architecture:** Clean code structure using industry-standard design patterns.
+---
 
-## 📸 Technical Preview & UI
+## 🏛️ System Architecture & Purpose
 
-To provide a clear understanding of the user journey and system interface:
+This project is built using a **Clean Architecture** approach, separating concerns into distinct layers to ensure scalability and maintainability.
 
-### 🔐 Authentication Flow
-*The platform features a secure, responsive authentication system built with Next.js Server Actions and BCrypt hashing.*
+### 1. **Core AI Engine (LLM Interaction)**
+- **Purpose:** To move beyond static question banks. The engine dynamically generates technical and behavioral questions based on the candidate's target role and real-time performance.
+- **Mechanism:** Implements sophisticated prompt engineering to evaluate response sentiment and provide actionable feedback.
 
-| Sign In Page | Sign Up Page |
-| :---: | :---: |
-| ![Sign In](https://raw.githubusercontent.com/samishahid516/AI-Drive-Mock-Interview-Platform/main/public/previews/signin.png) | ![Sign Up](https://raw.githubusercontent.com/samishahid516/AI-Drive-Mock-Interview-Platform/main/public/previews/signup.png) |
-| *Secure login with email validation* | *User registration & profile creation* |
+### 2. **Real-time Voice Pipeline (NLP & Banking)**
+- **Purpose:** To simulate a realistic, hands-free conversational environment.
+- **Mechanism:** Integrates deep-learning based **Speech-to-Text (STT)** and **Text-to-Speech (TTS)** agents. This matches contemporary "Voice Banking" and "Conversational AI" industry standards.
 
-### 🎙️ AI Interview Dashboard
-*Real-time interface showing the AI Agent interaction and live feedback metrics.*
+### 3. **High-Performance Backend (ASP.NET Core 8)**
+- **Purpose:** Serving as the orchestration layer for AI data flows and user management.
+- **Mechanism:** 
+    - **Minimal APIs:** For low-latency request handling.
+    - **Dapper ORM:** For high-speed data access to the SQLite persistence layer.
+    - **BCrypt Security:** Ensuring enterprise-standard data protection for user credentials.
 
-| Dashboard Overview | AI Interview Agent |
-| :---: | :---: |
-| ![Dashboard](https://raw.githubusercontent.com/samishahid516/AI-Drive-Mock-Interview-Platform/main/public/previews/dashboard.png) | ![Interviewer](https://raw.githubusercontent.com/samishahid516/AI-Drive-Mock-Interview-Platform/main/public/previews/agent.png) |
-| *Track interview history & performance* | *Live voice-interactivity with AI* |
+### 4. **Modern Interface (Next.js 15 & React 19)**
+- **Purpose:** Providing a seamless, dashboard-driven experience for interview tracking and performance visualization.
+- **Mechanism:** Utilizes **Server Actions** and **React 19 Hooks** for optimized data fetching and state management.
 
-> **Note to Interviewers:** Since this is a local development project, please refer to the `/public/previews` folder in this repository to view the full-resolution UI screenshots if the links above are currently being updated.
+---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack Analysis
 
-### Frontend
-- **Framework:** Next.js 15 (App Router)
-- **Library:** React 19
-- **Styling:** Tailwind CSS v4
-- **Icons/UI:** Lucide React, Shadcn UI (Components)
+| Component | Technology | Rationale |
+| :--- | :--- | :--- |
+| **Frontend** | Next.js 15, React 19 | Leveraging the latest App Router and Concurrent Rendering features. |
+| **Backend** | ASP.NET Core 8 | Industry-standard for robust, typed, and high-performance server logic. |
+| **Database** | SQLite + Dapper | Chosen for zero-config portability without sacrificing relational query power. |
+| **Styling** | Tailwind CSS v4 | Rapid UI development with optimized runtime performance. |
+| **AI/Audio** | Vapi / LLM | Production-ready voice agents for real-time interactivity. |
 
-### Backend
-- **Core:** ASP.NET Core 8 (Minimal APIs)
-- **Data Access:** Dapper ORM
-- **Database:** SQLite (Relational storage for performance & simplicity)
-- **Auth:** BCrypt.Net for secure password hashing
+---
 
-## 📁 Professional Project Structure
+## 📁 Repository Structure
 
 ```text
 sami.AI/
-├── frontend/               # Next.js 15 Application
+├── frontend/               # Next.js Application
 │   └── src/
-│       ├── app/            # Routes & API Endpoints
-│       ├── components/     # Atomic UI Components
-│       ├── services/       # API integration layer
-│       └── types/          # TypeScript interfaces
-├── backend/                # ASP.NET Core 8 Web API
+│       ├── app/            # System Routing & Next.js API Routes
+│       ├── components/     # Reusable UI Logic (Auth, Interview, UI components)
+│       └── services/       # Decoupled API Communication Layer
+├── backend/                # ASP.NET Core Web API
 │   ├── src/
-│   │   ├── Controllers/    # Presentation Layer
-│   │   ├── Models/         # Data Transfer Objects
-│   │   └── Services/       # Business Logic Layer
-│   └── Program.cs          # Entry Point
-└── shared/                 # Multi-platform assets
+│   │   ├── Controllers/    # API Resource Endpoints
+│   │   ├── Models/         # Schema Definitions / Data Transfer Objects
+│   │   └── Services/       # Business Logic & Infrastructure Layer
+│   └── Program.cs          # DI Container & Middleware Configuration
+└── shared/                 # Universal Constants & Utilities
 ```
 
-## 🎓 Why This Project?
-This project demonstrates proficiency in building **AI-integrated applications**, managing **asynchronous voice pipelines**, and implementing **clean architecture** in a full-stack environment. It specifically addresses the needs of modern AI/ML internships by showcasing hands-on experience with LLMs and voice-based banking simulations.
+---
+
+## 🎓 Learning Outcomes & Internship Applicability
+
+This repository directly proves my capability in fields requested by **Askari AI** and similar engineering programs:
+- **LLM Benchmarking:** Hands-on experience tuning AI responses for technical accuracy.
+- **Voice Banking Simulation:** Direct exposure to real-time speech processing pipelines.
+- **Full-Stack Orchestration:** Ability to connect complex AI endpoints to professional UI/UX.
 
 ---
-Developed by **[Sami Shahid](https://github.com/samishahid516)**
+**Developed by [Sami Shahid](https://github.com/samishahid516)**
